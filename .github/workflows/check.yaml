@@ -1,0 +1,35 @@
+name: Check ✅
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "*"
+  pull_request:
+    paths:
+      - "*"
+
+jobs:
+  check:
+    name: Check ✅
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛒
+        uses: actions/checkout@v3
+
+      - name: LLVM 🧰
+        uses: KyleMayes/install-llvm-action@v1
+        with:
+          version: "12.0.1"
+
+      - name: Python, Ninja, & Meson 🏗
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 python3-pip python3-setuptools python3-wheel ninja-build clang-tidy
+          pip3 install meson
+
+      - name: Test 🧪
+        run: |
+          CC=clang meson build-clang
+          cd build-clang
+          ninja test
