@@ -1,0 +1,12 @@
+# CMake
+cmake*
+CMakeLists.txt
+
+# CLion
+.idea
+
+# Visual Studio Code
+.vscode
+
+# Meson
+build*
