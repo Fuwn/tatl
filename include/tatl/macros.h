@@ -46,7 +46,7 @@
                                                                                \
   int reference(void)
 
-/* Access the global Tatl macro context */
+/* Access the Tatl macro context */
 #define TATL_CONTEXT __context
 
 /* Evaluate two values' equality */
