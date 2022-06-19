@@ -1,0 +1,4 @@
+option('tidy',
+       type : 'boolean',
+       value : false,
+       description : 'Enables the clang-tidy target')

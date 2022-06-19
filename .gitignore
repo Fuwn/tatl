@@ -10,3 +10,6 @@ CMakeLists.txt
 
 # Meson
 build*
+
+# clangd
+.cache

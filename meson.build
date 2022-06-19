@@ -57,14 +57,16 @@ run_target('format',
              project_header_files,
            ])
 
-run_target('tidy',
-           command : [
-             'run-clang-tidy',
-             # '-fix',
-             '-j',
-             '8',
-             'files',
-             '.', # '^((?!(fuwn)).)*$',
-             '-format',
-             '-p=' + meson.build_root()
-           ])
+if get_option('tidy')
+  run_target('tidy',
+            command : [
+              'run-clang-tidy',
+              # '-fix',
+              '-j',
+              '8',
+              'files',
+              '.', # '^((?!(fuwn)).)*$',
+              '-format',
+              '-p=' + meson.build_root()
+            ])
+endif
