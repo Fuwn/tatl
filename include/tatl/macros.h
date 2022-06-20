@@ -55,4 +55,10 @@
 /* Evaluate two values' inequality */
 #define TATL_IS_NOT(a, b) (a != b)
 
+/* Evaluate two strings' equality */
+#define TATL_STR_IS(a, b) (strcmp(a, b) == 0)
+
+/* Evaluate two strings' inequality */
+#define TATL_STR_IS_NOT(a, b) (strcmp(a, b) != 0)
+
 #endif /* TATL_MACROS */
