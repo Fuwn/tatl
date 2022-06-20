@@ -33,7 +33,7 @@ void tatl_new(struct tatl_context *context) {
   context->_names_size = 0;
   context->_tests_size = 0;
   context->_timer = clock();
-  context->_tag = malloc(1 * sizeof(char));
+  context->_tag = calloc(1, sizeof(char));
   context->_names = malloc(1 * sizeof(char *));
   context->_tests = malloc(1 * sizeof(int (*)(void)));
 }
