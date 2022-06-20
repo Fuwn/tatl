@@ -3,6 +3,8 @@
 
 ## Usage
 
+For simply C++ integration, checkout [Tael](https://github.com/Fuwn/tael)!
+
 ### Complex
 
 Tatl can be used via it's included testing context and utilities.
