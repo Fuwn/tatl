@@ -52,4 +52,7 @@
 /* Evaluate two values' equality */
 #define TATL_IS(a, b) (a == b)
 
+/* Evaluate two values' inequality */
+#define TATL_IS_NOT(a, b) (a != b)
+
 #endif /* TATL_MACROS */
