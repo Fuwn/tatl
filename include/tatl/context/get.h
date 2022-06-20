@@ -34,7 +34,7 @@ size_t *tatl_context_get_passed(struct tatl_context *);
 /* Get a Tatl context's total number of failing tests */
 size_t *tatl_context_get_failed(struct tatl_context *);
 /* Get a Tatl context's tag */
-char *tatl_context_get_tag(struct tatl_context *);
+char **tatl_context_get_tag(struct tatl_context *);
 /* Get a Tatl context's mute status */
 int *tatl_context_get_mute(struct tatl_context *);
 /* Get a Tatl context's exit code */

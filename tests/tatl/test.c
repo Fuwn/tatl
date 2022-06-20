@@ -38,7 +38,7 @@ TATL_TEST(tatl_context_get_failed_works) {
   return *tatl_context_get_failed(&context) == 1;
 }
 TATL_TEST(tatl_context_get_tag_works) {
-  return !strcmp(tatl_context_get_tag(&context), "hi");
+  return !strcmp(*tatl_context_get_tag(&context), "hi");
 }
 TATL_TEST(tatl_context_get_mute_works) {
   return *tatl_context_get_mute(&context) == 1;

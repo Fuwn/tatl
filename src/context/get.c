@@ -32,8 +32,8 @@ size_t *tatl_context_get_failed(struct tatl_context *context) {
   return &context->_failed;
 }
 
-char *tatl_context_get_tag(struct tatl_context *context) {
-  return context->_tag;
+char **tatl_context_get_tag(struct tatl_context *context) {
+  return &context->_tag;
 }
 
 int *tatl_context_get_mute(struct tatl_context *context) {
