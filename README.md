@@ -28,6 +28,19 @@ int main(void) {
 }
 ```
 
+The output with the previous example:
+
+```shell
+running 4 tests
+dummy ... ok (0ms)
+add works ... ok (0ms)
+dummy long ... ok (0ms)
+should fail ... FAILED (0ms)
+
+test result: FAILED. 3 passed (4 steps); 1 failed (0ms)
+
+```
+
 ## Examples
 
 More examples can be found in the [`examples/`](examples) directory.
