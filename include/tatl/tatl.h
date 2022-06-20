@@ -23,6 +23,7 @@
 
 #include <tatl/context.h>
 #include <tatl/context/get.h>
+#include <tatl/context/set.h>
 #include <tatl/macros.h>
 
 #endif /* TATL_TATL */
