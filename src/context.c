@@ -70,17 +70,10 @@ void tatl_run(struct tatl_context *context) {
   size_t i;
 
   if (!context->_mute) {
-    char *tag = malloc(strlen(context->_tag));
-    size_t tag_length;
-
-    strcpy(tag, context->_tag);
-
-    tag_length = strlen(tag);
+    size_t tag_length = strlen(context->_tag);
 
     printf("running %zd tests%s%s\n", context->_tests_size,
-           tag_length > 0 ? " from " : "", tag_length > 0 ? tag : "");
-
-    free(tag);
+           tag_length > 0 ? " from " : "", tag_length > 0 ? context->_tag : "");
   }
 
   for (i = 0; i != context->_names_size; ++i) {
