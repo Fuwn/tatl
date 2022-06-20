@@ -28,6 +28,8 @@ void tatl_context_set_mute(struct tatl_context *context, int mute) {
 }
 
 void tatl_context_set_tag(struct tatl_context *context, const char *const tag) {
+  free(context->_tag);
+
   context->_tag = malloc(strlen(tag) * sizeof(char));
 
   strcpy(context->_tag, tag);
